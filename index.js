@@ -5,9 +5,21 @@ const cors = require('cors');
 
 const app = express();
 
+// Allowed origins
+const allowedOrigins = [
+  'https://upepotourandtravelsv1.vercel.app',
+  'https://upepotravelsug.com'
+];
+
 // Middlewares
 app.use(cors({
-  origin: 'https://upepotourandtravelsug.com',
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -15,10 +27,10 @@ app.use(bodyParser.json());
 
 // Nodemailer transporter setup
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: 'gmail', // You can use other email providers here
   auth: {
-    user: 'info.joshtecs@gmail.com', 
-    pass: 'hufq jumv iaed gyta',
+    user: 'info.joshtecs@gmail.com', // Replace with your email
+    pass: 'hufq jumv iaed gyta',  // Replace with your email password or app-specific password
   },
 });
 
