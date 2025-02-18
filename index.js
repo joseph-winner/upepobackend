@@ -6,7 +6,11 @@ const cors = require('cors');
 const app = express();
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+  origin: 'https://upepotourandtravelsv1.vercel.app', // Replace with your frontend URL
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(bodyParser.json());
 
 // Nodemailer transporter setup
