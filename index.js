@@ -7,7 +7,7 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-  origin: 'https://upepotourandtravelsv1.vercel.app', // Replace with your frontend URL
+  origin: 'https://upepotourandtravelsug.com',
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -15,10 +15,10 @@ app.use(bodyParser.json());
 
 // Nodemailer transporter setup
 const transporter = nodemailer.createTransport({
-  service: 'gmail', // You can use other email providers here
+  service: 'gmail',
   auth: {
-    user: 'info.joshtecs@gmail.com', // Replace with your email
-    pass: 'hufq jumv iaed gyta',  // Replace with your email password or app-specific password
+    user: 'info.joshtecs@gmail.com', 
+    pass: 'hufq jumv iaed gyta',
   },
 });
 
