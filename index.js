@@ -29,8 +29,8 @@ app.use(bodyParser.json());
 const transporter = nodemailer.createTransport({
   service: 'gmail', // You can use other email providers here
   auth: {
-    user: 'info.joshtecs@gmail.com', // Replace with your email
-    pass: 'hufq jumv iaed gyta',  // Replace with your email password or app-specific password
+    user: 'upepotravelsug@gmail.com', // Replace with your email
+    pass: 'uhqu qgcc qhko ezcy',  // Replace with your email password or app-specific password
   },
 });
 
@@ -46,7 +46,7 @@ app.post('/submit-form', (req, res) => {
   // Email message setup for website owner
   const ownerMailOptions = {
     from: email, // Use the client's email as the sender
-    to: 'info.joshtecs@gmail.com', // Use the fixed email as the recipient
+    to: 'upepotravelsug@gmail.com', // Use the fixed email as the recipient
     subject: 'New Travel Request',
     html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
@@ -79,8 +79,8 @@ app.post('/submit-form', (req, res) => {
         <p>Best regards,</p>
         <p><strong>Upepo Travels System</strong></p>
         <footer style="margin-top: 20px; padding-top: 10px; border-top: 1px solid #ddd;">
-          <p style="font-size: 12px; color: #777;">Upepo Travels, 123 Travel Street, City, Country</p>
-          <p style="font-size: 12px; color: #777;">Phone: (123) 456-7890 | Email: info@upepotravels.com</p>
+          <p style="font-size: 12px; color: #777;">Upepo Travels, Kampala, Uganda</p>
+          <p style="font-size: 12px; color: #777;">Phone: +256 778 304 486 | Email: info@upepotravels.com</p>
         </footer>
       </div>
     `,
@@ -88,7 +88,7 @@ app.post('/submit-form', (req, res) => {
 
   // Email message setup for client confirmation
   const clientMailOptions = {
-    from: 'info.joshtecs@gmail.com', // Use the fixed email as the sender
+    from: 'upepotravelsug@gmail.com', // Use the fixed email as the sender
     to: email, // Send to the client's email
     subject: 'Travel Request Confirmation',
     html: `
@@ -122,8 +122,8 @@ app.post('/submit-form', (req, res) => {
         <p>Best regards,</p>
         <p><strong>Upepo Travels Team</strong></p>
         <footer style="margin-top: 20px; padding-top: 10px; border-top: 1px solid #ddd;">
-          <p style="font-size: 12px; color: #777;">Upepo Travels, 123 Travel Street, City, Country</p>
-          <p style="font-size: 12px; color: #777;">Phone: (123) 456-7890 | Email: info@upepotravels.com</p>
+          <p style="font-size: 12px; color: #777;">Upepo Travels, Kampala, Uganda</p>
+          <p style="font-size: 12px; color: #777;">Phone: +256 778 304 486 | Email: info@upepotravels.com</p>
         </footer>
       </div>
     `,
@@ -159,7 +159,7 @@ app.post('/submit-service-form', (req, res) => {
   // Email message setup for website owner
   const ownerMailOptions = {
     from: email, // Use the client's email as the sender
-    to: 'info.joshtecs@gmail.com', // Use the fixed email as the recipient
+    to: 'upepotravelsug@gmail.com', // Use the fixed email as the recipient
     subject: 'New Service Request',
     html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
@@ -192,8 +192,8 @@ app.post('/submit-service-form', (req, res) => {
         <p>Best regards,</p>
         <p><strong>Upepo Travels System</strong></p>
         <footer style="margin-top: 20px; padding-top: 10px; border-top: 1px solid #ddd;">
-          <p style="font-size: 12px; color: #777;">Upepo Travels, 123 Travel Street, City, Country</p>
-          <p style="font-size: 12px; color: #777;">Phone: (123) 456-7890 | Email: info@upepotravels.com</p>
+          <p style="font-size: 12px; color: #777;">Upepo Travels, Kampala, Uganda</p>
+          <p style="font-size: 12px; color: #777;">Phone: +256 778 304 486 | Email: info@upepotravels.com</p>
         </footer>
       </div>
     `,
@@ -201,7 +201,7 @@ app.post('/submit-service-form', (req, res) => {
 
   // Email message setup for client confirmation
   const clientMailOptions = {
-    from: 'info.joshtecs@gmail.com', // Use the fixed email as the sender
+    from: 'upepotravelsug@gmail.com', // Use the fixed email as the sender
     to: email, // Send to the client's email
     subject: 'Service Request Confirmation',
     html: `
@@ -235,8 +235,8 @@ app.post('/submit-service-form', (req, res) => {
         <p>Best regards,</p>
         <p><strong>Upepo Travels Team</strong></p>
         <footer style="margin-top: 20px; padding-top: 10px; border-top: 1px solid #ddd;">
-          <p style="font-size: 12px; color: #777;">Upepo Travels, 123 Travel Street, City, Country</p>
-          <p style="font-size: 12px; color: #777;">Phone: (123) 456-7890 | Email: info@upepotravels.com</p>
+          <p style="font-size: 12px; color: #777;">Upepo Travels, Kampala, Uganda</p>
+          <p style="font-size: 12px; color: #777;">Phone: +256 778 304 486 | Email: info@upepotravels.com</p>
         </footer>
       </div>
     `,
